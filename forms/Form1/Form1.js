@@ -28,7 +28,7 @@ while (userDecision == "car" || userDecision == "home" || userDecision == "stop"
     let homeRate = Number(prompt("What is your interest rate? (percentage in decimal form)"))
     let homePeriod = Number(prompt("What is your loan period in years? (either 15 or 30 years)"))
     let homePercent = homeRate * 100
-    var monthlyHomePayment = (homeLoan(homePrincipal, homeRate, homePeriod)) / homePeriod
+    var monthlyHomePayment = (homeLoanPayment(homePrincipal, homeRate, homePeriod)) / homePeriod
     var homePayment = monthlyHomePayment.toFixed(2);
       alert(`A home loan for $${homePrincipal} over ${homePeriod} years at ${homePercent}% interest would have a monthy payment of $${homePayment}.`)
 }
