@@ -21,7 +21,16 @@ while (userDecision == "car" || userDecision == "home" || userDecision == "stop"
     let carPercent = carRate * 100
     var monthlyCarPayment = (carLoanPayment(carPrincipal, carRate, carPeriod)) / carPeriod
     var carPayment = monthlyCarPayment.toFixed(2);
-      alert(`A car loan for $${carPrincipal} over ${carPeriod} months at ${carPercent}% interest would have a monthy payment of $${carPayment}.`)
+      alert(`A car loan for ${carPrincipal} over ${carPeriod} months at ${carPercent}% interest would have a monthy payment of ${carPayment}.`)
+}
+ if (userDecision == "home") {
+    let homePrincipal = Number(prompt("What is your principal? (no dollar sign or commas)"))
+    let homeRate = Number(prompt("What is your interest rate? (percentage in decimal form)"))
+    let homePeriod = Number(prompt("What is your loan period in years? (either 15 or 30 years)"))
+    let homePercent = homeRate * 100
+    var monthlyHomePayment = (homeLoanPayment(homePrincipal, homeRate, homePeriod)) / homePeriod
+    var homePayment = monthlyHomePayment.toFixed(2);
+      alert(`A home loan for ${homePrincipal} over ${homePeriod} years at ${homePercent}% interest would have a monthy payment of ${homePayment}.`)
 }
   if (userDecision == "stop") {
   alert("Program has been ended.")
